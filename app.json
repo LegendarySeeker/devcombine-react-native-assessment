@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "devcombine-react-native-assessment",
+    "slug": "devcombine-react-native-assessment",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.seeker522org.devcombinereactnativeassessment"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.seeker522org.devcombinereactnativeassessment"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +33,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "386b21a2-4370-424f-b615-da66b614bcd8"
+      }
+    },
+    "owner": "seeker522-org",
+    "updates": {
+      "url": "https://u.expo.dev/386b21a2-4370-424f-b615-da66b614bcd8"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
