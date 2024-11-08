@@ -61,3 +61,5 @@ GOOGLE_MAPS_API_KEY = AIzaSyDcwH-TMECTMZ4XqXwIUGg73jaLdU1vu2M
    Integration Testing: Apply React Native Testing Library for integration tests to ensure components interact correctly.
 
    Running Tests: To execute the test suite, go to your project directory and run:
+
+   npm test
