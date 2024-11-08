@@ -23,28 +23,41 @@ In the output, you'll find options to open the app in a
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+GOOGLE_MAPS_API_KEY = AIzaSyDcwH-TMECTMZ4XqXwIUGg73jaLdU1vu2M
 
-When you're ready, run:
+3. Architecture Overview
 
-```bash
-npm run reset-project
-```
+   Frontend: The app is developed using React Native with Expo for easy cross-platform deployment. It incorporates navigation for seamless user experience.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+   Backend: The Golang server handles JWT authentication, location data storage, and exposes endpoints for fetching data. Locations are fetched from the /locations endpoint.
 
-## Learn more
+   Google Maps Integration: Google Maps API is used to display the markers on the map. Markers are generated based on the location data retrieved from the server
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Implementation Decisions
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+   JWT Authentication: Chose JWT for token-based authentication to secure the application and manage user sessions efficiently.
 
-## Join the community
+   Google Maps API: Integrated Google Maps for dynamic location visualization. The map is configured to center around “925 Bush St. San Francisco, CA 94109” to maintain consistency.
 
-Join our community of developers creating universal apps.
+   Error Handling: Implemented robust error handling to manage API request failures, token expiration, and provide user-friendly messages.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+   Performance Optimization: Designed the application to handle multiple markers efficiently, ensuring smooth performance even when multiple locations are displayed.
+
+5. Future Improvements
+
+   User Profile Management: Implement features to allow users to manage their profiles and preferences.
+
+   Real-time Data Sync: Integrate WebSockets or a similar technology for real-time updates of location data.
+
+   Custom Marker Icons: Consider adding options for custom marker icons and clustering for enhanced visualization when dealing with numerous entries.
+
+   Offline Support: Evaluate the possibility of adding offline functionality so users can access some features without an internet connection.
+
+6. Testing Strategy
+
+   Unit Testing: Use Jest for unit tests, focusing on validating individual components and functions.
+
+   Integration Testing: Apply React Native Testing Library for integration tests to ensure components interact correctly.
+
+   Running Tests: To execute the test suite, go to your project directory and run:
